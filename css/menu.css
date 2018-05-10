@@ -1,0 +1,40 @@
+#menu-bar {
+    display: none;
+}
+
+header label {
+    float: left;
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 45px;
+}
+
+.menu {
+    position: absolute;
+    width: 30%;
+    height: 100px;
+    background: rgba(0,0,0,1);
+    top: 100px;
+    left: 0;
+    transition: all 0.5s;
+    transform: translateX(-100%);
+}
+
+.menu  a{
+    display: block;
+    color: #ffffff;
+    height: 30px;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+
+}
+
+.menu a:hover{
+    background: rgba(255,255,255,0.5);
+}
+#menu-bar:checked ~ .menu{
+    transform: translateX(0%);
+
+}
+
