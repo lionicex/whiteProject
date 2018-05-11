@@ -1,0 +1,107 @@
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/*--------------------------------------------------------------MODAL CONTENT*/
+
+/* Modal Header */
+.modal-header {
+    padding: 2px 16px;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2px 16px;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #000000;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #ffffff;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/*--------------------------------------------------------------NEWSLETTER*/
+
+/* Add some padding and a grey background color to containers */
+.container-newsletter {
+    color: #ffffff;
+    padding: 20px;
+
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 0 0;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* Style the submit button */
+input[type=submit] {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+}
+
+input[type=submit]:hover {
+    border: 1px #ffffff solid;
+    color: #ffffff;
+    background-color: #000000;
+}
