@@ -1,56 +1,60 @@
-#video .container{
+#video {
     display: flex;
+    justify-content: start;
+}
+
+#video .container {
+    display: table-row;
     flex-wrap: wrap;
     margin-top: 80px;
 }
-#video .video{
-    padding-right: 100px;
-}
-#video h1 {
-    font-size: 50px;
-}
-#video p {
-    font-size: 20px;
-    line-height: 30px;
-}
-.text1{
-    position: relative;
-    vertical-align: middle;
-    text-align: left;
-    width: 35%;
-    height: auto;
-   /*border: #000000 solid 1px;*/
-    padding-left: 100px;
 
-}
-.deco{
-    margin: 5px;
-    border-bottom: #000000 2px solid;
-    width: 340px;
-
-}
-.text1-align{
-    position: absolute;
-    top: 50%;
-    margin-top: -6em;
-}
-.video{
+#video .video {
     position: relative;
     width: 50%;
     height: 500px;
     border: #000000 solid 1px;
     overflow: hidden;
-
+    display: table-cell;
+    float: left;
+    margin-right: 100px;
 
 }
-.video iframe{
+
+.text1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: left;
+    padding-top: 20%;
+    width: 35%;
+
+}
+
+#video h1 {
+    font-size: 50px;
+}
+
+#video p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.deco {
+    margin: 5px;
+    border-bottom: #000000 2px solid;
+    width: 340px;
+
+}
+
+.video iframe {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-.centrado{
+
+.centrado {
     position: absolute;
     left: 0;
     top: 50%;
