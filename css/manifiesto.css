@@ -1,0 +1,96 @@
+#manifiesto {
+    display: table;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 200px;
+}
+
+#manifiesto .container {
+    display: table-row;
+
+}
+
+#manifiesto .container .text2 {
+    display: table-cell;
+    text-align: left;
+    width: 65%;
+    padding: 0;
+    float: left;
+    margin-top: 120px;
+
+}
+
+/*border: #000000 solid 1px;*/
+#manifiesto p {
+    font-size: 20px;
+    line-height: 30px;
+}
+
+#manifiesto h1 {
+    font-size: 50px;
+}
+
+#manifiesto .menuList {
+    display: table-cell;
+    background-color: #FFFFFF;
+    padding-top: 150px;
+    float: right;
+    margin-top: 50px;
+    width: auto; /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
+    text-align: center;
+}
+
+.menuList li {
+    overflow: hidden;
+    justify-content: end;
+    display: block; /* De este modo los elementos del menú se mostrán como bloques uno debajo de otro y hasta el ancho del menú */
+    padding: 0;
+    right: 0;
+    list-style: none;
+
+}
+
+.menuList li a, .menuList1 li a:focus {
+    display: block;
+    background-color: #FFFFFF;
+    border-top: 1px solid #000000;
+    border-left: 1px solid #000000;
+    border-right: 1px solid #000000;
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    font-family: Verdana, Arial, Helvetica;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 15px; /* Cuanto mayor sea el espaciado, mas grande será el area del botón. */
+}
+
+.border-descargar {
+    border-bottom: 1px solid #000000;
+}
+
+.linea {
+    position: relative;
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 46px;
+    border-left: 1px #000000 solid;
+    border-top: 1px #000000 solid;
+    border-right: 1px #000000 solid;
+
+}
+
+.menuList li a:hover {
+    background-color: #000000;
+    border-color: #000000;
+    color: #FFFFFF;
+}
+
+hr {
+    border-top: 1px solid #000000;
+    height: 52.5px;
+    margin-left: -140px;
+    transform: rotate(155deg);
+}
+
+
