@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 @import url(menu.css);
 @import url(video.css);
+@import url(manifiesto.css);
+@import url(popup.css);
 
 * {
     padding: 0;
@@ -27,7 +29,7 @@ header {
 }
 
 .container {
-    width: 90%;
+    width: 80%;
     margin: auto;
 }
 
@@ -73,7 +75,7 @@ footer {
 
 }
 
-footer a {
+footer .container a {
     left: 0;
     display: table-cell;
     vertical-align: middle;
@@ -92,7 +94,7 @@ footer .container {
     margin: auto;
 }
 
-footer p {
+footer .container p {
     left: 0;
     display: table-cell;
     vertical-align: middle;
