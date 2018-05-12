@@ -1,26 +1,33 @@
 #menu-bar {
     display: none;
+
+}
+
+header .container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
 }
 
 header label {
-    float: left;
     font-size: 25px;
     cursor: pointer;
-    margin-top: 45px;
 }
 
 .menu {
     position: absolute;
-    width: 8%;
+    width: auto;
     height: 100px;
-    background: rgba(0,0,0,1);
-    top: 100px;
+    background: rgba(0, 0, 0, 1);
+    top: 75px;
     left: 0;
     transition: all 0.5s;
     transform: translateX(-100%);
 }
 
-.menu  a{
+.menu a {
+
     display: block;
     color: #ffffff;
     height: 30px;
@@ -30,11 +37,28 @@ header label {
 
 }
 
-.menu a:hover{
-    background: rgba(255,255,255,0.5);
+.menu a:hover {
+
+    background: rgba(255, 255, 255, 0.5);
 }
-#menu-bar:checked ~ .menu{
+
+#menu-bar:checked ~ .menu {
     transform: translateX(0%);
 
 }
 
+@media (min-width: 700px) {
+    header label {
+        float: left;
+        font-size: 25px;
+        cursor: pointer;
+        margin-top: 45px;
+    }
+
+    header .container {
+        display: table;
+        height: 100px;
+
+    }
+
+}
