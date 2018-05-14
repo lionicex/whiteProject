@@ -1,0 +1,39 @@
+form h1 {
+    padding-bottom: 50px;
+}
+#ff label {
+    cursor:pointer;
+    margin:4px 0;
+    color: #000000;
+    display:block;
+    font-weight:800;
+
+}
+
+input, textarea{
+    display:block;
+    width:100%;
+    background-color: #ffffff;
+    color:#000;
+    border:1px solid #000000;
+    padding:10px;
+    margin-bottom:25px;
+}
+.sendButton {
+    position: relative;
+
+    height: auto;
+
+    width: auto;
+    text-align: center;
+    cursor:pointer;
+    padding: 15px;
+    background-color: #FFFFFF;
+
+    text-decoration: none;
+    color: #000;
+
+    font-size: 20px;
+    font-weight: bold;
+
+}
