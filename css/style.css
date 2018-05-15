@@ -49,8 +49,22 @@ header {
     text-decoration: none;
 }
 
+.social2 a {
+    display: none;
+    float: right;
+    font-size: 25px;
+    color: #000000;
+    background: #ffffff;
+    text-decoration: none;
+}
+
 .border-icon {
     margin: 0 0 0 10px;
+    border: #000 1px solid;
+
+}
+.border-icon2 {
+    margin: 10px 20px;
     border: #000 1px solid;
 
 }
