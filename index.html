@@ -41,10 +41,20 @@
 
 <main>
     <section id="blog">
-        <div class="container">
+        <div id="video" class="container" onclick="divLogin()">
 
             <article class="video">
-                <iframe src="https://www.youtube.com/embed/0wF8BjiWrxw?rel=0&amp;controls=0&amp;showinfo=0"
+                <div class="social2" style="z-index: 200; position: absolute; padding-top: 10px;">
+                    <ul>
+                        <li><a class="icon-heart-empty border-icon2" href=""></a></li>
+                        <li><a class="icon-facebook border-icon2"
+                               href=""></a></li>
+                        <li><a class="icon-twitter border-icon2" href=""></a></li>
+
+                    </ul>
+                </div>
+                </ul>
+                <iframe src="https://www.youtube.com/embed/0wF8BjiWrxw?modestbranding=0;rel=0&amp;controls=0&amp;showinfo=0"
                         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
             </article>
 
@@ -159,7 +169,17 @@
 
 
 <!--  Scripts-->
-
+<script>
+    var clic = 1;
+function divLogin(){
+    if(clic==1){
+        document.getElementById("#video .social2 a").style.display = "none";
+        clic = clic + 1;
+    } else{
+        document.getElementById("#video .social2 a").style.display = "block";
+        clic = 1;
+    }
+}</script>
 <script>
 
     var slideIndex = 0;
