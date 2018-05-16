@@ -49,7 +49,13 @@
                         <li><a class="icon-heart-empty border-icon2" href=""></a></li>
                         <li><a class="icon-facebook border-icon2"
                                href=""></a></li>
-                        <li><a class="icon-twitter border-icon2" href=""></a></li>
+
+
+                        <li><a class="icon-twitter border-icon2"
+                               href="https://twitter.com/share?ref_src=twsrc%5Etfw" data-size="large"
+                               data-text="White project" data-url="https://youtu.be/0wF8BjiWrxw"></a>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </li>
 
                     </ul>
                 </div>
@@ -77,7 +83,10 @@
             <article class="text2">
                 <h1>Manifiesto</h1>
                 <br>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
+                <textarea name="" id="textarea" cols="30" rows="32" class="textarea1"
+                          style="z-index: 200;position: absolute;background: none transparent;opacity: 0;"></textarea>
+                <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
+                    tincidunt ut
                     laoreet dolore magna aliquam erat volutpat.
                     <br>
                     Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit. Lobortis nisl ut
@@ -96,11 +105,15 @@
                     <br>
                     <b>White project team.</b>
                 </p>
+
             </article>
             <article class="menuList">
                 <div>
                     <ul>
-                        <li><a href='#' rel='nofollow'>Modificar</a></li>
+                        <li><a rel='nofollow' id="modificar" onclick="modificar()">Modificar</a></a><a
+                                style="display: none;" rel='nofollow' id="guardar" onclick="guardar()">Guardar</a></li>
+                        <li><a style="display: none;" rel='nofollow' id="restaurar" onclick="restaurar()">Restaurar</a>
+                        </li>
                         <li class="linea">
                             <hr>
                         </li>
@@ -108,9 +121,109 @@
                         <li><a href='#' rel='nofollow' class="border-descargar">Descargar</a></li>
                     </ul>
                 </div>
+
+            </article>
+
+
             </article>
         </div>
 
+        <script>
+            let area = document.getElementById("textarea");
+            let a = document.getElementById("texto");
+            let rest = a.textContent;
+            let b = a.textContent;
+
+            let botonModificar = document.getElementById("modificar");
+            let botonGuardar = document.getElementById("guardar");
+            let botonRestaurar = document.getElementById("restaurar");
+
+            let count = 0;
+            console.log(rest);
+
+            function modificar() {
+                count = 1;
+                let area = document.getElementById("textarea");
+                console.log("pulsado1");
+                area.style.background = "#000000";
+                area.style.opacity = "1";
+                area.style.color = "#ffffff";
+                area.textContent = b;
+                console.log(area.style.background);
+                botonGuardar.style.display = "block";
+                botonModificar.style.display = "none";
+                botonRestaurar.style.display = "block";
+
+            }
+
+            function guardar() {
+                count = 1;
+                console.log("pulsado2");
+                a.textContent = area.value;
+                area.style.background = "none transparent";
+                area.style.opacity = "0";
+                area.style.color = "#ffffff";
+                botonGuardar.style.display = "none";
+                botonModificar.style.display = "block";
+                botonRestaurar.style.display = "none";
+            }
+
+            function restaurar() {
+                count = 1;
+                console.log("rest");
+                area.value = b;
+            }
+
+        </script>
+        <!--<script>
+
+            let a = document.getElementById("texto");
+            let b = a.textContent;
+            let area = document.getElementById("textarea");
+            let m = document.getElementById("modificar");
+            let count = 0;
+            m.addEventListener("click", function () {
+                console.log("pulsado");
+                area.style.background = "#000000";
+                area.style.opacity = "1";
+                area.style.color = "#ffffff";
+                area.textContent = b;
+                console.log(area.style.background);
+
+                if(count == 0){
+                    count++;
+                    let e = document.getElementById("li-mod");
+                    let g = document.createElement("li");
+                    let c = document.createElement("a");
+                    let t = document.createTextNode("Guardar");
+                    let h = document.getElementById("modificar");
+                    h.TEXT_NODE = "Restaurar";
+
+                    c.appendChild(t);
+                    g.appendChild(c);
+                    e.appendChild(g);
+                    g.addEventListener("click", function (){
+
+                        count = 0;
+                        console.log(area.value);
+                        a.textContent = area.value;
+                        area.style.background = "none transparent";
+                        area.style.opacity = "0";
+                        area.style.color = "#ffffff";
+                        e.removeChild(g);
+
+
+                    })
+
+                }
+
+
+
+
+
+            })
+            console.log(b);
+        </script>-->
     </section>
     <section>
 
@@ -171,15 +284,16 @@
 <!--  Scripts-->
 <script>
     var clic = 1;
-function divLogin(){
-    if(clic==1){
-        document.getElementById("#video .social2 a").style.display = "none";
-        clic = clic + 1;
-    } else{
-        document.getElementById("#video .social2 a").style.display = "block";
-        clic = 1;
-    }
-}</script>
+
+    function divLogin() {
+        if (clic == 1) {
+            document.getElementById("#video .social2 a").style.display = "none";
+            clic = clic + 1;
+        } else {
+            document.getElementById("#video .social2 a").style.display = "block";
+            clic = 1;
+        }
+    }</script>
 <script>
 
     var slideIndex = 0;

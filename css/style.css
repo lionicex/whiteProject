@@ -31,6 +31,11 @@ header {
     padding-top: 20px;
 
 }
+.twitter-share-button{
+    color: #000;
+    background: #fff;
+
+}
 
 .container {
     width: 80%;

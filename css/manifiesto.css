@@ -1,5 +1,6 @@
 
 #manifiesto .container {
+
     display: flex;
     justify-content: left;
     flex-wrap: wrap;
@@ -8,12 +9,11 @@
 
 }
 
-
-
 #manifiesto .text2 {
     text-align: left;
     width: 100%;
     max-width: 500px;
+    z-index: 11;
 }
 
 #manifiesto p {
@@ -25,6 +25,7 @@
     font-size: 40px;
 }
 
+
 #manifiesto .menuList {
     width: 100%;
     height: auto;
@@ -32,6 +33,7 @@
     background-color: #FFFFFF;
     width: auto; /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
     text-align: center;
+    z-index: 10 !important;
 }
 
 .menuList li {
@@ -86,6 +88,7 @@ hr {
     transform: rotate(155deg);
 }
 
+
 @media (min-width: 800px) {
     #manifiesto .text2 {
         position: relative;
@@ -93,6 +96,7 @@ hr {
         width: 70%;
         max-width: 100%;
     }
+
     #manifiesto p {
         font-size: 20px;
         line-height: 30px;
@@ -101,6 +105,7 @@ hr {
     #manifiesto h1 {
         font-size: 50px;
     }
+
     #manifiesto .menuList {
         position: relative;
         right: 0;
@@ -113,6 +118,5 @@ hr {
         text-align: center;
     }
 
-
-
 }
+
