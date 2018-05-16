@@ -24,7 +24,11 @@
 #manifiesto h1 {
     font-size: 40px;
 }
-
+#manifiesto textarea {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
+}
 
 #manifiesto .menuList {
     width: 100%;
