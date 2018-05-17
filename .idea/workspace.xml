@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf2fd4c9-9c74-44b1-8f85-c47c71e06637" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/quickstart.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -39,8 +37,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2076">
-              <caret line="51" column="90" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="90" />
+            <state relative-caret-position="261">
+              <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#article#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#a#1;n#li#0;n#ul#0;n#div#0;n#article#1;n#div#0;n#section#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -53,19 +51,6 @@
                 <element signature="n#style#0;n#div#1;n#div#0;n#section#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="e#5082#5089#1" expanded="true" />
                 <element signature="e#5687#5693#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="quickstart.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quickstart.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
-              <folding>
-                <element signature="n#style#0;n#button#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -236,12 +221,12 @@
       <workItem from="1525823373846" duration="35328000" />
       <workItem from="1525964900885" duration="27746000" />
       <workItem from="1526126911690" duration="8419000" />
-      <workItem from="1526142246454" duration="61771000" />
+      <workItem from="1526142246454" duration="62262000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164117000" />
+    <option name="totallyTimeSpent" value="164608000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -707,8 +692,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2076">
-          <caret line="51" column="90" lean-forward="true" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="90" />
+        <state relative-caret-position="261">
+          <caret line="154" column="19" selection-start-line="154" selection-start-column="19" selection-end-line="154" selection-end-column="19" />
           <folding>
             <element signature="n#style#0;n#div#0;n#article#0;n#div#0;n#section#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#1;n#li#0;n#ul#0;n#div#0;n#article#1;n#div#0;n#section#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />

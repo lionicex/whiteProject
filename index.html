@@ -150,6 +150,9 @@
         <script src="https://apis.google.com/js/api.js"></script>
         <script>
             function like() {
+                gapi.load("client:auth2", function() {
+                    gapi.auth2.init({client_id: 'AIzaSyDrO4YHtPR3d6_9oPA99ejuj8oQCTgXAQg'});
+                });
                 return gapi.auth2.getAuthInstance()
                     .signIn({scope: "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner"})
                     .then(function () {
