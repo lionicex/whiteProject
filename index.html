@@ -58,11 +58,11 @@
                         <li><a class="icon-heart-empty border-icon2" href=""></a></li>
                         <li>
 
-                                <a class="icon-facebook border-icon2" data-href="https://youtu.be/0wF8BjiWrxw"
-                                   data-layout="button" data-size="small" data-mobile-iframe="true" target="_blank"
-                                   href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutu.be%2F0wF8BjiWrxw&amp;src=sdkpreparse"
-                                   class="fb-xfbml-parse-ignore"></a>
-                            
+                            <a class="icon-facebook border-icon2" data-href="https://youtu.be/0wF8BjiWrxw"
+                               data-layout="button" data-size="small" data-mobile-iframe="true" target="_blank"
+                               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutu.be%2F0wF8BjiWrxw&amp;src=sdkpreparse"
+                               class="fb-xfbml-parse-ignore"></a>
+
                         </li>
 
 
@@ -98,8 +98,10 @@
             <article class="text2">
                 <h1>Manifiesto</h1>
                 <br>
-                <textarea name="" id="textarea" cols="30" rows="32" class="textarea1"
-                          style="z-index: 200;position: absolute;background: none transparent;opacity: 0;"></textarea>
+                <!--<textarea name="" id="textarea" cols="30" rows="32" class="textarea1"
+                          style="z-index: 200;position: absolute;background: none transparent;opacity: 0;">
+                </textarea>-->
+
                 <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod
                     tincidunt ut laoreet dolore magna aliquam erat volutpat.
                     <br>
@@ -124,15 +126,21 @@
             <article class="menuList">
                 <div>
                     <ul>
-                        <li><a rel='nofollow' id="modificar" onclick="modificar()">Modificar</a></a><a
+                        <li><a rel='nofollow' id="modificar" onclick="modificar()">Modificar</a><a
                                 style="display: none;" rel='nofollow' id="guardar" onclick="guardar()">Guardar</a></li>
                         <li><a style="display: none;" rel='nofollow' id="restaurar" onclick="restaurar()">Restaurar</a>
                         </li>
                         <li class="linea">
                             <hr>
                         </li>
-                        <li><a href='#' rel='nofollow'>Compartir</a></li>
-                        <li><a href='#' rel='nofollow' class="border-descargar">Descargar</a></li>
+                        <li><a id="compartir" rel='nofollow' onclick="compartir()">Compartir</a>
+                            <div id="social3" class="social3">
+                                <a class="icon-facebook" href="https://www.facebook.com/wearetheam/"
+                                   style="float: left;"></a>
+                                <a class="icon-twitter" href="https://twitter.com/wearetheam" style="float: right;"></a>
+                            </div>
+                        </li>
+                        <li><a rel='nofollow' class="border-descargar" onclick="saveTextAsFile()">Descargar</a></li>
                     </ul>
                 </div>
 
@@ -143,27 +151,21 @@
         </div>
 
         <script>
-            let area = document.getElementById("textarea");
+            /*MANIFIESTO*/
             let a = document.getElementById("texto");
-            let rest = a.textContent;
-            let b = a.textContent;
+            let rest = a.innerHTML;
+            console.log(rest);
 
             let botonModificar = document.getElementById("modificar");
             let botonGuardar = document.getElementById("guardar");
             let botonRestaurar = document.getElementById("restaurar");
-
-            let count = 0;
-            console.log(rest);
+            let botonCompartir = document.getElementById("compartir");
+            let botonSocial3 = document.getElementById("social3");
 
             function modificar() {
-                count = 1;
-                let area = document.getElementById("textarea");
-                console.log("pulsado1");
-                area.style.background = "#000000";
-                area.style.opacity = "1";
-                area.style.color = "#ffffff";
-                area.textContent = b;
-                console.log(area.style.background);
+                a.contentEditable = "true";
+                a.style.background = "#000000";
+                a.style.color = "#ffffff";
                 botonGuardar.style.display = "block";
                 botonModificar.style.display = "none";
                 botonRestaurar.style.display = "block";
@@ -171,73 +173,55 @@
             }
 
             function guardar() {
-                count = 1;
-                console.log("pulsado2");
-                a.textContent = area.value;
-                area.style.background = "none transparent";
-                area.style.opacity = "0";
-                area.style.color = "#ffffff";
+                a.contentEditable = "false";
+                a.style.background = "#ffffff";
+                a.style.color = "#000000";
                 botonGuardar.style.display = "none";
                 botonModificar.style.display = "block";
                 botonRestaurar.style.display = "none";
+                botonCompartir.style.display = "block";
+                botonSocial3.style.display = "none";
             }
 
             function restaurar() {
-                count = 1;
-                console.log("rest");
-                area.value = b;
+                a.innerHTML = rest;
+            }
+
+            function compartir() {
+                botonCompartir.style.display = "none";
+                botonSocial3.style.display = "block";
+            }
+            function saveTextAsFile()
+            {
+                var textToWrite = a.textContent;
+
+                var textFileAsBlob = new Blob([textToWrite], {type:'text/plain'});
+                var fileNameToSaveAs = "WhiteProject - manifiesto.txt";
+
+                var downloadLink = document.createElement("a");
+                downloadLink.download = fileNameToSaveAs;
+                downloadLink.innerHTML = "Download File";
+                if (window.webkitURL != null)
+                {
+                    // Chrome allows the link to be clicked
+                    // without actually adding it to the DOM.
+                    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
+                }
+                else
+                {
+                    // Firefox requires the link to be added to the DOM
+                    // before it can be clicked.
+                    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
+                    downloadLink.onclick = destroyClickedElement;
+                    downloadLink.style.display = "none";
+                    document.body.appendChild(downloadLink);
+                }
+
+                downloadLink.click();
             }
 
         </script>
-        <!--<script>
 
-            let a = document.getElementById("texto");
-            let b = a.textContent;
-            let area = document.getElementById("textarea");
-            let m = document.getElementById("modificar");
-            let count = 0;
-            m.addEventListener("click", function () {
-                console.log("pulsado");
-                area.style.background = "#000000";
-                area.style.opacity = "1";
-                area.style.color = "#ffffff";
-                area.textContent = b;
-                console.log(area.style.background);
-
-                if(count == 0){
-                    count++;
-                    let e = document.getElementById("li-mod");
-                    let g = document.createElement("li");
-                    let c = document.createElement("a");
-                    let t = document.createTextNode("Guardar");
-                    let h = document.getElementById("modificar");
-                    h.TEXT_NODE = "Restaurar";
-
-                    c.appendChild(t);
-                    g.appendChild(c);
-                    e.appendChild(g);
-                    g.addEventListener("click", function (){
-
-                        count = 0;
-                        console.log(area.value);
-                        a.textContent = area.value;
-                        area.style.background = "none transparent";
-                        area.style.opacity = "0";
-                        area.style.color = "#ffffff";
-                        e.removeChild(g);
-
-
-                    })
-
-                }
-
-
-
-
-
-            })
-            console.log(b);
-        </script>-->
     </section>
     <section>
 
