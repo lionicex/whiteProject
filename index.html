@@ -42,10 +42,11 @@
 </header>
 
 <main>
-    <section id="blog">
+    <div id="blog">
         <div id="video" class="container" onclick="divLogin()">
 
             <article class="video">
+
                 <div class="social2" style="z-index: 200; position: absolute; padding-top: 10px;">
                     <ul>
                         <li>
@@ -59,8 +60,6 @@
                                class="fb-xfbml-parse-ignore"></a>
 
                         </li>
-
-
                         <li>
                             <a class="icon-twitter border-icon2"
                                href="https://twitter.com/home?status=%23whiteproject%20https%3A//youtu.be/0wF8BjiWrxw"></a>
@@ -68,9 +67,10 @@
 
                     </ul>
                 </div>
-                </ul>
+
                 <iframe src="https://www.youtube.com/embed/0wF8BjiWrxw?modestbranding=0;rel=0&amp;controls=0&amp;showinfo=0"
                         frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div id="likes"></div>
             </article>
 
             <article class="text1">
@@ -83,8 +83,8 @@
                 <p class="deco"><b>Lee nuestro Manifiesto y hazlo el tuyo.</b></p>
                 </span>
             </article>
-
         </div>
+    </div>
     </section>
 
     <section id="manifiesto">
@@ -103,12 +103,14 @@
                     Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit. Lobortis nisl ut
                     aliquip ex ea commodo consequat.
                     <br>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+                    illum
                     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.
                     <br>
                     Tui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
                     <br>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod
+                    tincidunt
                     ut laoreet dolore magna aliquam erat volutpat.
                     <br>
                     Lorem ipsum dolor sit amet.
@@ -122,8 +124,10 @@
                 <div>
                     <ul>
                         <li><a rel='nofollow' id="modificar" onclick="modificar()">Modificar</a><a
-                                style="display: none;" rel='nofollow' id="guardar" onclick="guardar()">Guardar</a></li>
-                        <li><a style="display: none;" rel='nofollow' id="restaurar" onclick="restaurar()">Restaurar</a>
+                                style="display: none;" rel='nofollow' id="guardar" onclick="guardar()">Guardar</a>
+                        </li>
+                        <li><a style="display: none;" rel='nofollow' id="restaurar"
+                               onclick="restaurar()">Restaurar</a>
                         </li>
                         <li class="linea">
                             <hr>
@@ -135,7 +139,8 @@
                                    content="wepa wepa wepa"
                                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutu.be%2F0wF8BjiWrxw&amp;src=sdkpreparse"
                                    class="fb-xfbml-parse-ignore"></a>
-                                <a class="icon-twitter" href="https://twitter.com/wearetheam" style="float: right;"></a>
+                                <a class="icon-twitter" href="https://twitter.com/wearetheam"
+                                   style="float: right;"></a>
                             </div>
                         </li>
                         <li><a rel='nofollow' class="border-descargar" onclick="saveTextAsFile()">Descargar</a></li>
@@ -147,13 +152,46 @@
 
             </article>
         </div>
+
+
         <script src="https://apis.google.com/js/api.js"></script>
+        <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+
+
         <script>
+            gapi.load("client", {callback: load});
+
+            function load() {
+                gapi.client.setApiKey("AIzaSyDrO4YHtPR3d6_9oPA99ejuj8oQCTgXAQg");
+                gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
+                    .then(function () {
+                            gapi.client.youtube.videos.list({
+                                "part": "statistics",
+                                "id": "0wF8BjiWrxw"
+                            })
+                                .then(function (response) {
+                                        // Handle the results here (response.result has the parsed body).
+                                        document.getElementById("likes").innerHTML = response.result.items[0].statistics.likeCount + " likes";
+                                    },
+                                    function (err) {
+                                        console.error("Execute error", err);
+                                    });
+
+                        },
+
+                        function (err) {
+                            console.error("Error loading GAPI client for API", err);
+                        }
+                    )
+                ;
+            }
+
+            gapi.load("client:auth2", function () {
+                gapi.auth2.init({client_id: '969999023027-17rs21qdcfg1p51mnr7cjkh3pgrhtngc.apps.googleusercontent.com'});
+            });
+
             function like() {
-                gapi.load("client:auth2", function() {
-                    gapi.auth2.init({client_id: '969999023027-17rs21qdcfg1p51mnr7cjkh3pgrhtngc.apps.googleusercontent.com'});
-                });
-                return gapi.auth2.getAuthInstance()
+                gapi.auth2.getAuthInstance()
                     .signIn({scope: "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner"})
                     .then(function () {
                         gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest").then(function () {
@@ -175,6 +213,8 @@
                     });
             }
         </script>
+
+
         <script>
             (function (d, s, id) {
                 var js, fjs = d.getElementsByTagName(s)[0];
@@ -230,7 +270,7 @@
             function saveTextAsFile() {
                 var textToWrite = a.textContent;
 
-                var textFileAsBlob = new Blob([textToWrite], {type: 'text/pdf'});
+                var textFileAsBlob = new Blob([textToWrite], {type: 'text/plain'});
                 var fileNameToSaveAs = "WhiteProject - manifiesto";
 
                 var downloadLink = document.createElement("a");
