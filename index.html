@@ -5,33 +5,29 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no initial-scale=1, maximum-scale=1, minimum-scale=1"/>
     <title>White Project</title>
-
     <!-- CSS  -->
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="img" href="img">
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 </head>
 <body>
 <div id="fb-root"></div>
 
 <header>
-
     <div class="container">
 
         <label class="icon-menu border-icon margin-button-menu" for="menu-bar"></label>
         <img src="img/Logo_whiteproyect.png" class="logo border-icon">
         <div>
             <input type="checkbox" id="menu-bar">
-
             <nav class="menu">
                 <a href="#">Home</a>
                 <a href="contacto.html">Contacto</a>
             </nav>
         </div>
 
-
         <div class="social">
-
             <a class="icon-facebook border-icon margin-button" href="https://www.facebook.com/wearetheam/"></a>
             <a class="icon-twitter border-icon margin-button" href="https://twitter.com/wearetheam"></a>
             <a class="icon-instagram border-icon margin-button"
@@ -43,23 +39,19 @@
 
 <main>
     <div id="blog">
-
         <div id="video" class="container">
 
             <article class="video">
-
                 <div class="social2" style="z-index: 200; position: absolute; padding-top: 10px;">
                     <ul>
                         <li>
                             <a class="icon-heart-empty border-icon2" onclick="like()"></a>
                         </li>
                         <li>
-
                             <a class="icon-facebook border-icon2" data-href="https://youtu.be/0wF8BjiWrxw"
                                data-layout="button" data-size="small" data-mobile-iframe="true" target="_blank"
                                href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutu.be%2F0wF8BjiWrxw&amp;src=sdkpreparse"
                                class="fb-xfbml-parse-ignore"></a>
-
                         </li>
                         <li>
                             <a class="icon-twitter border-icon2"
@@ -84,8 +76,10 @@
                 <p class="deco"><b>Lee nuestro Manifiesto y hazlo el tuyo.</b></p>
                 </span>
             </article>
+
         </div>
     </div>
+
     </section>
 
     <section id="manifiesto">
@@ -93,8 +87,7 @@
             <article class="text2">
                 <h1>Manifiesto</h1>
                 <br>
-
-                <p id="texto" class="fb-quotable">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                     nonummy nibh euismod
                     tincidunt ut laoreet dolore magna aliquam erat volutpat.
                     <br>
@@ -136,164 +129,16 @@
                                    data-layout="button" data-size="small" data-mobile-iframe="true" target="_blank"
                                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutu.be%2F0wF8BjiWrxw&amp;src=sdkpreparse"
                                    class="fb-xfbml-parse-ignore"></a>
-                                <a class="icon-twitter" href="https://twitter.com/wearetheam"
-                                   style="float: right;"></a>
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="icon-twitter"
+                                   data-text="" data-hashtags="#theagilemonkeys" data-show-count="false"></a>
+                                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                             </div>
                         </li>
-                        <li><a rel='nofollow' class="border-descargar" href="pdf.php">Descargar</a></li>
+                        <li><a rel='nofollow' class="border-descargar" onclick="saveTextAsFile()">Descargar</a></li>
                     </ul>
                 </div>
-
-            </article>
-
-
             </article>
         </div>
-
-
-        <script src="https://apis.google.com/js/api.js"></script>
-        <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
-
-
-        <script>
-            gapi.load("client", {callback: load});
-
-            function load() {
-                gapi.client.setApiKey("AIzaSyDrO4YHtPR3d6_9oPA99ejuj8oQCTgXAQg");
-                gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-                    .then(function () {
-                            gapi.client.youtube.videos.list({
-                                "part": "statistics",
-                                "id": "0wF8BjiWrxw"
-                            })
-                                .then(function (response) {
-                                        // Handle the results here (response.result has the parsed body).
-                                        document.getElementById("likes").innerHTML = response.result.items[0].statistics.likeCount + " likes";
-                                    },
-                                    function (err) {
-                                        console.error("Execute error", err);
-                                    });
-
-                        },
-
-                        function (err) {
-                            console.error("Error loading GAPI client for API", err);
-                        }
-                    )
-                ;
-            }
-
-            gapi.load("client:auth2", function () {
-                gapi.auth2.init({client_id: '969999023027-17rs21qdcfg1p51mnr7cjkh3pgrhtngc.apps.googleusercontent.com'});
-            });
-
-            function like() {
-                gapi.auth2.getAuthInstance()
-                    .signIn({scope: "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner"})
-                    .then(function () {
-                        gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest").then(function () {
-                            gapi.client.youtube.videos.rate({
-                                "id": "0wF8BjiWrxw",
-                                "rating": "like"
-                            }).then(function (response) {
-                                    // Handle the results here (response.result has the parsed body).
-                                    console.log("Response", response);
-                                },
-                                function (err) {
-                                    console.error("Execute error", err);
-                                });
-                        }, function (err) {
-                            console.error("Error loading GAPI client for API", err);
-                        });
-                    }, function (err) {
-                        console.error("Error signing in", err);
-                    });
-            }
-        </script>
-
-
-        <script>
-            (function (d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s);
-                js.id = id;
-                js.src = 'https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v3.0';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
-        </script>
-        <script>
-            /*MANIFIESTO*/
-            let a = document.getElementById("texto");
-            let rest = a.innerHTML;
-            console.log(rest);
-
-            let botonModificar = document.getElementById("modificar");
-            let botonGuardar = document.getElementById("guardar");
-            let botonRestaurar = document.getElementById("restaurar");
-            let botonCompartir = document.getElementById("compartir");
-            let botonSocial3 = document.getElementById("social3");
-
-            function modificar() {
-                a.contentEditable = "true";
-                a.style.background = "#000000";
-                a.style.color = "#ffffff";
-                botonGuardar.style.display = "block";
-                botonModificar.style.display = "none";
-                botonRestaurar.style.display = "block";
-
-            }
-
-            function guardar() {
-                a.contentEditable = "false";
-                a.style.background = "#ffffff";
-                a.style.color = "#000000";
-                botonGuardar.style.display = "none";
-                botonModificar.style.display = "block";
-                botonRestaurar.style.display = "none";
-                botonCompartir.style.display = "block";
-                botonSocial3.style.display = "none";
-            }
-
-            function restaurar() {
-                a.innerHTML = rest;
-            }
-
-            function compartir() {
-                botonCompartir.style.display = "none";
-                botonSocial3.style.display = "block";
-            }
-
-            function saveTextAsFile() {
-                var textToWrite = a.textContent;
-
-                var textFileAsBlob = new Blob([textToWrite], {type: 'text/plain'});
-                var fileNameToSaveAs = "WhiteProject - manifiesto";
-
-                var downloadLink = document.createElement("a");
-                downloadLink.download = fileNameToSaveAs;
-                downloadLink.innerHTML = "Download File";
-                if (window.webkitURL != null) {
-                    // Chrome allows the link to be clicked
-                    // without actually adding it to the DOM.
-                    downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
-                }
-                else {
-                    // Firefox requires the link to be added to the DOM
-                    // before it can be clicked.
-                    downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
-                    downloadLink.onclick = destroyClickedElement;
-                    downloadLink.style.display = "none";
-                    document.body.appendChild(downloadLink);
-                }
-
-                downloadLink.click();
-            }
-
-        </script>
-        <script>
-            document.getElementById("textoPdf").textContent = a.textContent;
-        </script>
     </section>
     <section>
 
@@ -303,7 +148,6 @@
                 <div class="mySlides fade"><img src="img/2.png" style="width:100%"></div>
                 <div class="mySlides fade"><img src="img/3.png" style="width:100%"></div>
                 <div class="mySlides fade"><img src="img/4.png" style="width:100%"></div>
-
                 <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
                                                                          onclick="plusSlides(1)">&#10095;</a></div>
             <br>
@@ -321,7 +165,6 @@
 
     <!-- Trigger/Open The Modal -->
     <a id="myBtn"><b>Forma parte de White project.</b></a>
-
     <!-- The Modal -->
     <div id="myModal" class="modal">
         <!-- Modal content -->
@@ -335,115 +178,25 @@
                     <div class="container-newsletter">
                         <input type="text" placeholder="Escribe tu email" name="mail" required>
                     </div>
-
                     <div class="container-newsletter">
                         <input type="submit" value="Enviar">
                     </div>
                 </form>
             </div>
-
         </div>
     </div>
-
     <p>&copy; 2018 Nombre de la empresa. Todos los derechos reservados.</p>
-
 
 </footer>
 
-
 <!--  Scripts-->
-
-<script>
-
-    var slideIndex = 0;
-    showSlides();
-    var slides, dots;
-
-    function plusSlides(position) {
-        slideIndex += position;
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }
-        else if (slideIndex < 1) {
-            slideIndex = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-    }
-
-    function currentSlide(index) {
-        if (index > slides.length) {
-            index = 1
-        }
-        else if (index < 1) {
-            index = slides.length
-        }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[index - 1].style.display = "block";
-        dots[index - 1].className += " active";
-    }
-
-    function showSlides() {
-        var i;
-        slides = document.getElementsByClassName("mySlides");
-        dots = document.getElementsByClassName("dot");
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slideIndex++;
-        if (slideIndex > slides.length) {
-            slideIndex = 1
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 3000); // Change image every 3 seconds
-    }
-
-</script>
-
-<script>
-    // Get the modal
-    var modal = document.getElementById('myModal');
-
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+<script src="js/youtube.js"></script>
+<script src="js/facebook.js"></script>
+<script src="js/manifiesto.js"></script>
+<script src="js/slideshow.js"></script>
+<script src="js/modal.js"></script>
 
 
 </body>
