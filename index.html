@@ -43,7 +43,8 @@
 
 <main>
     <div id="blog">
-        <div id="video" class="container" onclick="divLogin()">
+
+        <div id="video" class="container">
 
             <article class="video">
 
@@ -92,9 +93,6 @@
             <article class="text2">
                 <h1>Manifiesto</h1>
                 <br>
-                <!--<textarea name="" id="textarea" cols="30" rows="32" class="textarea1"
-                          style="z-index: 200;position: absolute;background: none transparent;opacity: 0;">
-                </textarea>-->
 
                 <p id="texto" class="fb-quotable">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
                     nonummy nibh euismod
@@ -136,14 +134,13 @@
                             <div id="social3" class="social3">
                                 <a class="icon-facebook"
                                    data-layout="button" data-size="small" data-mobile-iframe="true" target="_blank"
-                                   content="wepa wepa wepa"
                                    href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutu.be%2F0wF8BjiWrxw&amp;src=sdkpreparse"
                                    class="fb-xfbml-parse-ignore"></a>
                                 <a class="icon-twitter" href="https://twitter.com/wearetheam"
                                    style="float: right;"></a>
                             </div>
                         </li>
-                        <li><a rel='nofollow' class="border-descargar" onclick="saveTextAsFile()">Descargar</a></li>
+                        <li><a rel='nofollow' class="border-descargar" href="pdf.php">Descargar</a></li>
                     </ul>
                 </div>
 
@@ -294,7 +291,9 @@
             }
 
         </script>
-
+        <script>
+            document.getElementById("textoPdf").textContent = a.textContent;
+        </script>
     </section>
     <section>
 
@@ -353,18 +352,7 @@
 
 
 <!--  Scripts-->
-<script>
-    var clic = 1;
 
-    function divLogin() {
-        if (clic == 1) {
-            document.getElementById("#video .social2 a").style.display = "none";
-            clic = clic + 1;
-        } else {
-            document.getElementById("#video .social2 a").style.display = "block";
-            clic = 1;
-        }
-    }</script>
 <script>
 
     var slideIndex = 0;

@@ -65,11 +65,13 @@ header {
 #social3{
     display: none;
 }
-.social3 a {
 
+.social3 a {
+    width: 100%;
     font-size: 25px;
     color: #000000;
     text-decoration: none;
+    justify-content: center;
 }
 
 .border-icon {
