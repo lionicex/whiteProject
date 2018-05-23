@@ -92,7 +92,10 @@ hr {
     transform: rotate(155deg);
 }
 
-
+#nombre {
+    display: none;
+    color: #51b0af;
+}
 @media (min-width: 800px) {
     #manifiesto .text2 {
         position: relative;
