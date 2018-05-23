@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf2fd4c9-9c74-44b1-8f85-c47c71e06637" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/contacto.html" beforeDir="false" afterPath="$PROJECT_DIR$/contacto.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/fontello.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/fontello.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/manifiesto.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/manifiesto.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/fontello.eot" beforeDir="false" afterPath="$PROJECT_DIR$/font/fontello.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/fontello.svg" beforeDir="false" afterPath="$PROJECT_DIR$/font/fontello.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/fontello.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/font/fontello.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/fontello.woff" beforeDir="false" afterPath="$PROJECT_DIR$/font/fontello.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/font/fontello.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/font/fontello.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/manifiesto.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/manifiesto.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -35,7 +25,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-424">
@@ -56,11 +46,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contacto.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="contacto.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/contacto.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1357">
-              <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
+            <state relative-caret-position="457">
+              <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -145,10 +135,10 @@
         <option value="$PROJECT_DIR$/js/modal.js" />
         <option value="$PROJECT_DIR$/js/facebook.js" />
         <option value="$PROJECT_DIR$/js/youtube.js" />
-        <option value="$PROJECT_DIR$/contacto.html" />
         <option value="$PROJECT_DIR$/css/manifiesto.css" />
         <option value="$PROJECT_DIR$/js/manifiesto.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/contacto.html" />
       </list>
     </option>
   </component>
@@ -275,12 +265,12 @@
       <workItem from="1525964900885" duration="27746000" />
       <workItem from="1526126911690" duration="8419000" />
       <workItem from="1526142246454" duration="87227000" />
-      <workItem from="1526820349627" duration="4578000" />
+      <workItem from="1526820349627" duration="4804000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="194151000" />
+    <option name="totallyTimeSpent" value="194377000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -627,13 +617,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/contacto.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1357">
-          <caret line="59" column="50" selection-start-line="59" selection-start-column="50" selection-end-line="59" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-195">
@@ -672,6 +655,13 @@
           <folding>
             <element signature="n#style#0;n#div#1;n#div#0;n#section#1;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/contacto.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="109" column="35" selection-start-line="109" selection-start-column="35" selection-end-line="109" selection-end-column="35" />
         </state>
       </provider>
     </entry>
