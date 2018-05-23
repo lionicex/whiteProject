@@ -1,57 +1,56 @@
-#manifiesto {
-    display: table;
-    width: 80%;
-    margin: auto;
-    padding-bottom: 200px;
-}
 
 #manifiesto .container {
-    display: table-row;
+
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    margin-top: 100px;
 
 }
 
-#manifiesto .container .text2 {
-    display: table-cell;
+#manifiesto .text2 {
     text-align: left;
-    width: 65%;
-    padding: 0;
-    float: left;
-    margin-top: 120px;
-
+    width: 100%;
+    max-width: 500px;
+    z-index: 11;
 }
 
-/*border: #000000 solid 1px;*/
 #manifiesto p {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 30px;
 }
 
 #manifiesto h1 {
-    font-size: 50px;
+    font-size: 40px;
+}
+#manifiesto textarea {
+    font-size: 16px;
+    line-height: 30px;
+    text-align: left;
 }
 
 #manifiesto .menuList {
-    display: table-cell;
+    width: 100%;
+    height: auto;
+    padding: 0% 5% 30px 5%;
     background-color: #FFFFFF;
-    padding-top: 150px;
-    float: right;
-    margin-top: 50px;
     width: auto; /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
     text-align: center;
+    z-index: 10 !important;
 }
 
 .menuList li {
     overflow: hidden;
-    justify-content: end;
     display: block; /* De este modo los elementos del menú se mostrán como bloques uno debajo de otro y hasta el ancho del menú */
-    padding: 0;
     right: 0;
     list-style: none;
 
 }
 
 .menuList li a, .menuList1 li a:focus {
-    display: block;
+
+    display: flex;
     background-color: #FFFFFF;
     border-top: 1px solid #000000;
     border-left: 1px solid #000000;
@@ -93,4 +92,38 @@ hr {
     transform: rotate(155deg);
 }
 
+#nombre {
+    display: none;
+    color: #51b0af;
+}
+@media (min-width: 800px) {
+    #manifiesto .text2 {
+        position: relative;
+        text-align: left;
+        width: 70%;
+        max-width: 100%;
+    }
+
+    #manifiesto p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    #manifiesto h1 {
+        font-size: 50px;
+    }
+
+    #manifiesto .menuList {
+        position: relative;
+        right: 0;
+        width: 100%;
+        height: auto;
+        padding: 70px 0 0 50px;
+        float: right;
+        margin-left: auto;
+        width: auto; /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
+        text-align: center;
+    }
+
+}
 

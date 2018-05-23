@@ -1,160 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no initial-scale=1, maximum-scale=1, minimum-scale=1"/>
     <title>White Project</title>
-
     <!-- CSS  -->
     <link rel="stylesheet" href="css/fontello.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="img" href="img">
+    <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 </head>
-<body>
-<header>
 
+<body>
+<div id="fb-root"></div>
+
+<header>
     <div class="container">
 
-
+        <label class="icon-menu border-icon margin-button-menu" for="menu-bar"></label>
+        <img src="img/Logo_whiteproyect.png" class="logo border-icon">
         <div>
             <input type="checkbox" id="menu-bar">
-            <label class="icon-menu border-icon" for="menu-bar"></label>
             <nav class="menu">
-                <a href="">Home</a>
-                <a href="">Contacto</a>
+                <a href="#">Home</a>
+                <a href="contacto.html">Contacto</a>
             </nav>
         </div>
-        <img src="img/Logo_whiteproyect.png" class="logo">
+
         <div class="social">
-            <label class="icon-facebook border-icon margin-button" for="menu-bar"></label>
-            <label class="icon-twitter border-icon margin-button" for="menu-bar"></label>
-            <label class="icon-instagram border-icon margin-button" for="menu-bar"></label>
+            <a class="icon-facebook border-icon margin-button" href="https://www.facebook.com/wearetheam/"></a>
+            <a class="icon-twitter border-icon margin-button" href="https://twitter.com/wearetheam"></a>
+            <a class="icon-instagram border-icon margin-button"
+               href="https://www.instagram.com/explore/tags/theagilemonkeys/"></a>
         </div>
 
     </div>
 </header>
+
 <main>
-    <section id="video">
-        <div class="container">
-            <div class="video">
-                <iframe src="https://www.youtube.com/embed/0wF8BjiWrxw?rel=0&amp;controls=0&amp;showinfo=0"
-                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-            </div>
-            <div class="text1">
-                <div class="text1-align">
-                    <h1>It´s your project,<br>it´s our project</h1>
-                    <br>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore.</p>
-                    <br>
-                    <p class="deco"><b>Lee nuestro Manifiesto y hazlo el tuyo.</b></p>
+    <div id="blog">
+        <div id="video" class="container">
+
+            <article class="video">
+                <div class="social2" style="z-index: 200; position: absolute; padding-top: 10px;">
+                    <ul>
+                        <li>
+                            <a class="icon-heart-empty border-icon2" onclick="like()"></a>
+                        </li>
+                        <li>
+                            <a class="icon-facebook border-icon2" data-href="https://youtu.be/0wF8BjiWrxw"
+                               data-layout="button" data-size="small" data-mobile-iframe="true" target="_blank"
+                               href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fyoutu.be%2F0wF8BjiWrxw&amp;src=sdkpreparse"
+                               class="fb-xfbml-parse-ignore"></a>
+                        </li>
+                        <li>
+                            <a class="icon-twitter border-icon2"
+                               href="https://twitter.com/home?status=%23whiteproject%20https%3A//youtu.be/0wF8BjiWrxw"></a>
+                        </li>
+
+                    </ul>
                 </div>
-            </div>
+
+                <iframe src="https://www.youtube.com/embed/0wF8BjiWrxw?modestbranding=0;rel=0&amp;controls=0&amp;showinfo=0"
+                        frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div id="likes"></div>
+            </article>
+
+            <article class="text1">
+                <span>
+                <h1>It´s your project,<br>it´s our project</h1>
+                <br>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore.</p>
+                <br>
+                <p class="deco"><b>Lee nuestro Manifiesto y hazlo el tuyo.</b></p>
+                </span>
+            </article>
 
         </div>
+    </div>
+
     </section>
 
     <section id="manifiesto">
         <div class="container">
-            <div class="text2">
+            <article class="text2">
                 <h1>Manifiesto</h1>
                 <br>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat.
+                <p id="texto">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                    nonummy nibh euismod
+                    tincidunt ut laoreet dolore magna aliquam erat volutpat.
                     <br>
                     Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit. Lobortis nisl ut
                     aliquip ex ea commodo consequat.
                     <br>
-                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel
+                    illum
                     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim.
                     <br>
                     Tui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
                     <br>
-                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt
+                    Lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod
+                    tincidunt
                     ut laoreet dolore magna aliquam erat volutpat.
                     <br>
                     Lorem ipsum dolor sit amet.
                     <br>
                     <br>
-                    <b>White project team.</b>
+                    <b id="nombre">Escribe nombre + </b><b> White project team.</b>
                 </p>
-            </div>
-            <div class="menuList">
-                <ul>
-                    <li><a href='#' rel='nofollow'>Modificar</a></li>
-                    <li class="linea"><hr></li>
-                    <li><a href='#' rel='nofollow'>Compartir</a></li>
-                    <li><a href='#' rel='nofollow' class="border-descargar">Descargar</a></li>
-                </ul>
+
+            </article>
+            <article class="menuList">
+                <div>
+                    <ul>
+                        <li>
+                            <a rel='nofollow' id="modificar" onclick="modificar()">Modificar</a>
+                            <a style="display: none;" rel='nofollow' id="guardar" onclick="guardar()">Guardar</a>
+                        </li>
+                        <li>
+                            <a style="display: none;" rel='nofollow' id="restaurar" onclick="restaurar()">Restaurar</a>
+                        </li>
+                        <li class="linea">
+                            <hr>
+                        </li>
+                        <li>
+                            <a id="compartir" rel='nofollow' onclick="compartir()">Compartir</a>
+                            <div id="social3" class="social3">
+                                <a id="email-button" class="icon-mail" target="_blank" onclick="setEmailHref()"></a>
+                                <a id="twitter-button" class="icon-twitter" target="_blank" onclick="setTwitterHref()"></a>
+                            </div>
+                        </li>
+                        <li>
+                            <a rel='nofollow' class="border-descargar" onclick="saveTextAsFile()">Descargar</a>
+                        </li>
+                    </ul>
+                </div>
+            </article>
+        </div>
+    </section>
+    <section>
+
+        <div id="slide">
+            <div class="slideshow-container">
+                <div class="mySlides fade"><img src="img/1.png" style="width:100%"></div>
+                <div class="mySlides fade"><img src="img/2.png" style="width:100%"></div>
+                <div class="mySlides fade"><img src="img/3.png" style="width:100%"></div>
+                <div class="mySlides fade"><img src="img/4.png" style="width:100%"></div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next"
+                                                                         onclick="plusSlides(1)">&#10095;</a></div>
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
             </div>
         </div>
 
     </section>
 </main>
 <footer>
-    <div class="container">
-        <!-- Trigger/Open The Modal -->
-        <a id="myBtn"><b>Forma parte de White project.</b></a>
-        <!-- The Modal -->
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <span class="close">&times;</span>
-                    <h2>Suscríbete</h2>
-                </div>
-                <div class="modal-body">
-                    <form>
-                        <div class="container-newsletter">
-                            <input type="text" placeholder="Escribe tu email" name="mail" required>
-                        </div>
 
-                        <div class="container-newsletter">
-                            <input type="submit" value="Enviar">
-                        </div>
-                    </form>
-                </div>
-
+    <!-- Trigger/Open The Modal -->
+    <a id="myBtn"><b>Forma parte de White project.</b></a>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Suscríbete</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="container-newsletter">
+                        <input type="text" placeholder="Escribe tu email" name="mail" required>
+                    </div>
+                    <div class="container-newsletter">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
             </div>
         </div>
-
-        <p>&copy; 2018 Nombre de la empresa. Todos los derechos reservados.</p>
     </div>
+    <p>&copy; 2018 Nombre de la empresa. Todos los derechos reservados.</p>
+
 </footer>
 
-
 <!--  Scripts-->
-<script>
-    // Get the modal
-    var modal = document.getElementById('myModal');
+<script src="https://apis.google.com/js/api.js"></script>
+<script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script>
+<script src="js/youtube.js"></script>
+<script src="js/facebook.js"></script>
+<script src="js/manifiesto.js"></script>
+<script src="js/slideshow.js"></script>
+<script src="js/modal.js"></script>
 
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // When the user clicks on the button, open the modal
-    btn.onclick = function () {
-        modal.style.display = "block";
-    }
-
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
-        modal.style.display = "none";
-    }
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function (event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="js/materialize.js"></script>
-<script src="js/init.js"></script>
 
 </body>
 </html>

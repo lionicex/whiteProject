@@ -3,6 +3,9 @@
 @import url(video.css);
 @import url(manifiesto.css);
 @import url(popup.css);
+@import url(footer.css);
+@import url(slideshow.css);
+@import url(contacto.css);
 
 * {
     padding: 0;
@@ -12,12 +15,12 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-top: 100px;
+    padding-top: 70px;
 }
 
 header {
     width: 100%;
-    height: 100px;
+    height: 75px;
     background: #ffffff;
     color: #000;
     position: fixed;
@@ -25,6 +28,12 @@ header {
     left: 0;
     z-index: 100;
     text-align: center;
+    padding-top: 20px;
+
+}
+.twitter-share-button{
+    color: #000;
+    background: #fff;
 
 }
 
@@ -33,74 +42,95 @@ header {
     margin: auto;
 }
 
-header .container {
-    display: table;
-    height: 100px;
+.logo {
+    height: 31px;
 
 }
 
-.logo {
-    position: fixed;
-    height: 90px;
-    margin-top: 20px;
-    left: 47%;
+.social a {
+    float: right;
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+}
 
+.social2 a {
+    display: none;
+    float: right;
+    font-size: 25px;
+    color: #000000;
+    background: #ffffff;
+    text-decoration: none;
+}
+#social3{
+    display: none;
+}
+
+.social3 a {
+    width: 100%;
+    font-size: 25px;
+    color: #000000;
+    text-decoration: none;
+    justify-content: center;
 }
 
 .border-icon {
+    margin: 0 0 0 10px;
     border: #000 1px solid;
-}
 
-.social {
-    float: right;
 }
-
-.margin-button {
-    margin-left: 10px;
-    margin-top: 45px;
-}
-
-footer {
-    width: 100%;
-    height: 70px;
-    bottom: 0;
-    border-top: #000000 solid 1px;
-    background: #ffffff;
-    color: #000;
-    position: fixed;
-    left: 0;
-    z-index: 100;
-    text-align: center;
-    display: table;
+.border-icon2 {
+    margin: 10px 20px;
+    border: #000 1px solid;
 
 }
 
-footer .container a {
-    left: 0;
-    display: table-cell;
-    vertical-align: middle;
-    border-right: 1px #000000 solid;
-    height: 100%;
-    max-width: 300px;
-    width: 300px;
-    text-decoration: none;
-    color: #000;
+@media (min-width: 1024px) {
+    .container {
+        width: 1000px;
+    }
 
 }
 
-footer .container {
-    display: table-row;
-    width: 90%;
-    margin: auto;
-}
+@media (min-width: 700px) {
 
-footer .container p {
-    left: 0;
-    display: table-cell;
-    vertical-align: middle;
-    height: 100%;
-    text-align: right;
-    padding-right: 50px;
-    font-size: 12px;
-    color: #000;
+    body {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    header {
+        height: 105px;
+        position: fixed;
+        padding-top: 0;
+
+    }
+
+    header .container {
+        display: table;
+        height: 100px;
+
+    }
+
+    .logo {
+        position: fixed;
+        height: 90px;
+        margin-top: 20px;
+        left: 46%;
+
+    }
+
+    .border-icon {
+        border: #000 1px solid;
+    }
+
+    .margin-button {
+        margin-left: 10px;
+        margin-top: 45px;
+    }
+    .margin-button-menu {
+        margin-left: 0;
+        margin-top: 45px;
+    }
+
 }

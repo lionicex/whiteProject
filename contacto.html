@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no initial-scale=1, maximum-scale=1, minimum-scale=1"/>
+    <title>White Project</title>
+
+    <!-- CSS  -->
+    <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="img" href="img">
+</head>
+<body>
+<header>
+
+    <div class="container">
+
+        <label class="icon-menu border-icon margin-button" for="menu-bar"></label>
+        <img src="img/Logo_whiteproyect.png" class="logo border-icon">
+        <div>
+            <input type="checkbox" id="menu-bar">
+
+            <nav class="menu">
+                <a href="index.html">Home</a>
+                <a href="#">Contacto</a>
+            </nav>
+        </div>
+
+
+        <div class="social">
+
+            <a class="icon-facebook border-icon margin-button" href=""></a>
+            <a class="icon-twitter border-icon margin-button" href=""></a>
+            <a class="icon-instagram border-icon margin-button" href=""></a>
+        </div>
+
+
+    </div>
+</header>
+
+<main>
+    <section id="manifiesto">
+        <div class="container">
+            <article class="text2">
+
+                <form name="primerformulario" id="ff" method="post" action="envio.php">
+
+                    <h1>Contacto</h1>
+
+                    <label>
+                        <span>Nombre*</span>
+                        <input type="text" placeholder="Por favor escribe tu nombre" name="name" id="name"
+                               required autofocus>
+                    </label>
+
+                    <label>
+                        <span>Email*</span>
+                        <input type="email" placeholder="tuemail@servidor.com" name="email" id="email" required
+                               pattern="^([A-Z a-z 0-9](\._-){0,1})+[A-Za-z0-9]\@([A-Za-z0-9])+((\.){0,1}[A-Za-z0-9]){2}\.[a-z]{2,3}$">
+                    </label>
+                    <label>
+                        <span>Mensaje</span>
+                        <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje"
+                                  style="height:200px"></textarea>
+
+                    </label>
+                    <label>
+                        <input class="sendButton" type="submit" name="Submit" value="Enviar" method="post" action="mailto:lionicex@gmail.com">
+                    </label>
+                </form>
+
+            </article>
+        </div>
+
+
+    </section>
+
+</main>
+<footer>
+
+    <!-- Trigger/Open The Modal -->
+    <a id="myBtn"><b>Forma parte de White project.</b></a>
+    <p>&copy; 2018 Nombre de la empresa. Todos los derechos reservados.</p>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Suscríbete</h2>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="container-newsletter">
+                        <input type="text" placeholder="Escribe tu email" name="mail" required>
+                    </div>
+
+                    <div class="container-newsletter">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+
+</footer>
+<script src="js/modal.js"></script>
+</body>
+</html>
