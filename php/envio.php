@@ -1,27 +1,23 @@
 <?php
-        // A continuación se capturan los datos especificados del formulario
-        $name=$_POST['name'];
-    $telefono=$_POST['telefono'];
-    $email=$_POST['email'];
-    $mensaje=$_POST['mensaje'];
+       if (isset($_POST["name"]) and isset($_POST["correo"])) {
+       $destino="lionicex@gmail.com";
+       $asunto="Contacto White Project";
 
-    // Debes indicar tu correo electrónico, eliminando el ejemplo
-    $to = "lionicex@gmail.com";
+       $name=$_POST['name'];
+       $email=$_POST['email'];
+       $asunto=$_POST['asunto'];
+       $mensaje=$_POST['mensaje'];
+       $msn="
+       nombre: $name  \n
+       email: $email  \n
+       asunto: $asunto\n
+       mensaje: $mensaje  \n
+       ";
 
-    // Puedes cambiar el asunto por defecto y que datos apareceran en el email que te llegue
-    $subject = "Entrada del Formulario de Contacto";
-    $message = " Name: " . $name . "\r\n Teléfono: " . $telefono . "\r\n Email: " . $email . "\r\n Mensaje: " . $mensaje;
+       $cabeceras = 'From: lionicex@gmailcom' . "\r\n" . 'Reply-To: lionicex@gmail.com ' . "\r\n" . 'X-Mailer: PHP/' . phpversion();
 
-    // Puedes cambiar el nombre del remitente que aparecerá en tu bandeja de entrada, la página de sucesión y el mensaje que ve el usuario al final.
-    $from = "White project";
-    $headers = "From:" . $from . "\r\n";
-    $headers .= "Content-type: text/plain; charset=UTF-8" . "\r\n";
-    if(@mail($to,$subject,$message,$headers))
-    {
-        print "<script>document.location.href='https://www.todopatuweb.net/mensaje-de-formulario-enviado.html';</script>";
-
-
-}else{
-echo "Error! Por favor inténtalo de nuevo.";
-}
-?>
+       if(mail($destino,$asunto,$msn,$cabeceras)){
+         header("Location: contacto.php?m=1");
+         }
+       }
+       ?>

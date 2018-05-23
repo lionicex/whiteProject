@@ -18,7 +18,7 @@ header label {
 .menu {
     position: absolute;
     width: auto;
-    height: 100px;
+    height: 120px;
     background: rgba(0, 0, 0, 1);
     top: 75px;
     left: 0;
