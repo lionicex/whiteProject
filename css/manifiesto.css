@@ -1,19 +1,29 @@
-
+.button-close  {
+    position: relative;
+    top: 0;
+    right: 0;
+    z-index: 500;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #EE0000;
+}
 #manifiesto .container {
-
+    display: -webkit-flex;
     display: flex;
-    justify-content: left;
-    flex-wrap: wrap;
+    justify-content: right;
     margin-bottom: 100px;
     margin-top: 100px;
 
 }
 
 #manifiesto .text2 {
-    text-align: left;
+    /*text-align: left;
     width: 100%;
     max-width: 500px;
-    z-index: 11;
+    z-index: 11;*/
+
+
+    color: #fff;
 }
 
 #manifiesto p {
@@ -31,13 +41,18 @@
 }
 
 #manifiesto .menuList {
-    width: 100%;
-    height: auto;
-    padding: 0% 5% 30px 5%;
+    padding: 77px 0 0 0;
     background-color: #FFFFFF;
-    width: auto; /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
+    width: auto;
+    /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
     text-align: center;
     z-index: 10 !important;
+    position: relative;
+    right: 0;
+    height: auto;
+    top: 0;
+    /* margin-left: 0; */
+    display: flex;
 }
 
 .menuList li {
@@ -97,12 +112,11 @@ hr {
     color: #51b0af;
 }
 @media (min-width: 800px) {
-    #manifiesto .text2 {
+    /*#manifiesto .text2 {
         position: relative;
         text-align: left;
-        width: 70%;
-        max-width: 100%;
-    }
+        width: auto;
+    }*/
 
     #manifiesto p {
         font-size: 20px;
@@ -111,19 +125,32 @@ hr {
 
     #manifiesto h1 {
         font-size: 50px;
+        color: #000;
     }
 
     #manifiesto .menuList {
+
+        padding: 77px 0 0 0;
+        background-color: #FFFFFF;
+        width: auto;
+        /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
+        text-align: center;
+        z-index: 10 !important;
         position: relative;
         right: 0;
-        width: 100%;
         height: auto;
-        padding: 70px 0 0 50px;
-        float: right;
-        margin-left: auto;
-        width: auto; /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
-        text-align: center;
-    }
+        top: 0;
+        /* margin-left: 0; */
+        display: flex;
 
+    }
+    .manifiesto-bg{
+        background-color: #000000;
+        width: 100%;
+        position: relative;
+        padding: 20px 20% 20px 20px;
+        z-index: 11;
+
+    }
 }
 
