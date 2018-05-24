@@ -1,43 +1,50 @@
 /*MANIFIESTO*/
 let a = document.getElementById("texto");
 let rest = a.innerHTML;
+
 let botonModificar = document.getElementById("modificar");
 let botonGuardar = document.getElementById("guardar");
 let botonRestaurar = document.getElementById("restaurar");
 let botonCompartir = document.getElementById("compartir");
 let botonSocial3 = document.getElementById("social3");
 let autor = document.getElementById("nombre");
+let cerrar = document.getElementById("button-close");
+let fondo = document.getElementById("manifiesto-bg");
 
 
 function modificar() {
     a.contentEditable = "true";
-    a.style.background = "#000000";
+    fondo.style.background = "#000000";
+    fondo.style.padding = "20px 20% 20px 20px";
     a.style.color = "#ffffff";
+    cerrar.style.display = "block";
     botonGuardar.style.display = "block";
     botonModificar.style.display = "none";
     botonRestaurar.style.display = "block";
     autor.style.display = "inline-block";
-    console.log(a.innerHTML.length);
-    console.log(rest.length);
-    console.log(a.textContent.length);
 
 }
 
 function guardar() {
     a.contentEditable = "false";
-    a.style.background = "#ffffff";
+    fondo.style.background = "#ffffff";
+    fondo.style.padding = "20px 20% 20px 0";
     a.style.color = "#000000";
+    cerrar.style.display = "none";
     botonGuardar.style.display = "none";
     botonModificar.style.display = "block";
     botonRestaurar.style.display = "none";
     botonCompartir.style.display = "block";
     botonSocial3.style.display = "none";
-    if (a.length == rest.lenght) {
-        autor.style.display = "none";
-    }
 
 }
 
+function close() {
+    console.log("wi");
+    guardar();
+    console.log("ejecutado");
+    restaurar();
+}
 
 function restaurar() {
     a.innerHTML = rest;
