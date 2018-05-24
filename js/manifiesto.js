@@ -50,9 +50,28 @@ function compartir() {
 
 function saveTextAsFile() {
     let doc = new jsPDF();
-    let splitText = doc.splitTextToSize(a.textContent, 270);
+    let splitText = doc.splitTextToSize(a.textContent, 267);
+    let title = 'Manifiesto';
+
+    doc.setProperties({
+        title: 'Manifiesto'    // The rest are optional
+        // subject: 'Mi Manifiesto',
+        // author: '',
+        // keywords: 'manifiesto, whiteproject',
+        // creator: 'lionicex'
+    });
+
+    doc.rect(0, 0, 297, 25, 'F');
+    doc.setTextColor(255, 255, 255);
+    doc.setFont('helvetica');
+    doc.setFontType('bold');
+    doc.setFontSize(40);
+    doc.text(title, 15, 20);
+    doc.setTextColor(0);
+    doc.setFont('times');
+    doc.setFontType('roman');
     doc.setFontSize(12);
-    doc.text(splitText, 10, 10);
+    doc.text(splitText, 10, 35);
     doc.save('WhiteProject - manifiesto.pdf');
 }
 
