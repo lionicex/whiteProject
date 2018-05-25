@@ -1,6 +1,6 @@
 # whiteProject
 
-###Para visualizar correctamente la web
+### Para visualizar correctamente la web
 
 ```bash
 npm i
