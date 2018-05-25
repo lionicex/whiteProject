@@ -2,35 +2,36 @@
     display: none;
     position: relative;
     top: -40px;
-    float: right;
     right: 0;
+    float: right;
     width: 40px;
     height: 40px;
-    border: 1px solid #000000;
+    border: 1px solid red;
     color: #000000;
     cursor: pointer;
+    z-index: 7;
 }
 
 #manifiesto .container {
     display: -webkit-flex;
     display: flex;
-    justify-content: right;
+    justify-content: center;
     margin-bottom: 100px;
     margin-top: 100px;
-
+    flex-wrap: wrap;
 }
 
 #manifiesto-bg {
     background-color: #ffffff;
     width: 100%;
     position: relative;
-    padding: 20px 20% 20px 0;
+    padding: 20px 0 20px 0;
     z-index: 11;
-
 }
 
 #manifiesto .text2 {
     color: #000000;
+
 }
 
 #manifiesto p {
@@ -40,10 +41,6 @@
 
 #manifiesto h1 {
     font-size: 40px;
-}
-
-#modificar, #guardar, #restaurar, #descarga {
-    cursor: pointer;
 }
 
 #manifiesto .menuList {
@@ -119,11 +116,7 @@ hr {
 }
 
 @media (min-width: 800px) {
-    /*#manifiesto .text2 {
-        position: relative;
-        text-align: left;
-        width: auto;
-    }*/
+
     #manifiesto p {
         font-size: 20px;
         line-height: 30px;
@@ -150,6 +143,33 @@ hr {
         display: flex;
 
     }
-
+    #manifiesto-bg {
+        background-color: #ffffff;
+        width: 100%;
+        position: relative;
+        padding: 20px 20% 20px 0;
+        z-index: 11;
+    }
+    #button-close {
+        display: none;
+        position: relative;
+        top: -40px;
+        float: right;
+        right: 0;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #000000;
+        color: #000000;
+        cursor: pointer;
+        z-index: 7;
+    }
+    #manifiesto .container {
+        display: -webkit-flex;
+        display: flex;
+        justify-content: right;
+        margin-bottom: 100px;
+        margin-top: 100px;
+        flex-wrap: nowrap;
+    }
 }
 

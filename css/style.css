@@ -15,7 +15,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-top: 70px;
+    padding-top: 0;
+    padding-bottom: 110px;
 }
 
 header {

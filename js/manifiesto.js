@@ -1,7 +1,6 @@
 /*MANIFIESTO*/
 let a = document.getElementById("texto");
 let rest = a.innerHTML;
-
 let botonModificar = document.getElementById("modificar");
 let botonGuardar = document.getElementById("guardar");
 let botonRestaurar = document.getElementById("restaurar");
@@ -40,10 +39,10 @@ function guardar() {
 }
 
 function close() {
-    console.log("wi");
-    guardar();
-    console.log("ejecutado");
+    console.log("ejecutado close");
     restaurar();
+    guardar();
+
 }
 
 function restaurar() {
