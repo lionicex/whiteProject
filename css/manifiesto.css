@@ -41,6 +41,10 @@
 
 #manifiesto h1 {
     font-size: 40px;
+    max-width: 200px;
+    padding: 5px;
+    width: auto;
+    background-color: whitesmoke;
 }
 
 #manifiesto .menuList {
@@ -125,6 +129,9 @@ hr {
     #manifiesto h1 {
         font-size: 50px;
         color: #000;
+        max-width: 245px;
+
+
     }
 
     #manifiesto .menuList {
@@ -171,5 +178,6 @@ hr {
         margin-top: 100px;
         flex-wrap: nowrap;
     }
+
 }
 
