@@ -1,2 +1,5 @@
 # whiteProject
-prueba theam
+
+Para visualizar correctamente la web
+
+$npm i
