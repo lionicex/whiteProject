@@ -1,4 +1,4 @@
-/*MANIFIESTO*/
+
 let a = document.getElementById("texto");
 let rest = a.innerHTML;
 let botonModificar = document.getElementById("modificar");
@@ -38,8 +38,7 @@ function guardar() {
 
 }
 
-function close() {
-    console.log("ejecutado close");
+function cancelar() {
     restaurar();
     guardar();
 
