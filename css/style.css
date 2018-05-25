@@ -15,8 +15,8 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    padding-top: 0;
-    padding-bottom: 110px;
+    padding-top: 50px;
+    padding-bottom: 0;
 }
 
 header {
@@ -32,7 +32,8 @@ header {
     padding-top: 20px;
 
 }
-.twitter-share-button{
+
+.twitter-share-button {
     color: #000;
     background: #fff;
 
@@ -63,7 +64,8 @@ header {
     background: #ffffff;
     text-decoration: none;
 }
-#social3{
+
+#social3 {
     display: none;
 }
 
@@ -80,6 +82,7 @@ header {
     border: #000 1px solid;
 
 }
+
 .border-icon2 {
     margin: 10px 20px;
     border: #000 1px solid;
@@ -101,7 +104,7 @@ header {
     }
 
     header {
-        height: 105px;
+        height: 110px;
         position: fixed;
         padding-top: 0;
 
@@ -129,6 +132,7 @@ header {
         margin-left: 10px;
         margin-top: 45px;
     }
+
     .margin-button-menu {
         margin-left: 0;
         margin-top: 45px;

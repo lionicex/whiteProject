@@ -10,6 +10,11 @@
     color: #000000;
     cursor: pointer;
     z-index: 5;
+    text-align: center;
+    padding-top: 4px;
+    padding-left: 2px;
+    font-size: 25px;
+
 }
 
 #manifiesto .container {
@@ -51,7 +56,6 @@
     padding: 77px 0 0 0;
     background-color: #FFFFFF;
     width: auto;
-    /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
     text-align: center;
     z-index: 10 !important;
     position: relative;
@@ -63,7 +67,7 @@
 
 .menuList li {
     overflow: hidden;
-    display: block; /* De este modo los elementos del menú se mostrán como bloques uno debajo de otro y hasta el ancho del menú */
+    display: block;
     right: 0;
     list-style: none;
 
@@ -82,7 +86,7 @@
     font-family: Verdana, Arial, Helvetica;
     font-size: 12px;
     font-weight: bold;
-    padding: 15px; /* Cuanto mayor sea el espaciado, mas grande será el area del botón. */
+    padding: 15px;
 
 }
 
@@ -131,7 +135,6 @@ hr {
         color: #000;
         max-width: 245px;
 
-
     }
 
     #manifiesto .menuList {
@@ -139,17 +142,16 @@ hr {
         padding: 86px 0 0 0;
         background-color: #FFFFFF;
         width: auto;
-        /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
         text-align: center;
         z-index: 10 !important;
         position: relative;
         right: 0;
         height: auto;
         top: 0;
-        /* margin-left: 0; */
         display: flex;
 
     }
+
     #manifiesto-bg {
         background-color: #ffffff;
         width: 100%;
