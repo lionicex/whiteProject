@@ -34,6 +34,8 @@ function like() {
         .signIn({scope: "https://www.googleapis.com/auth/youtube https://www.googleapis.com/auth/youtube.force-ssl https://www.googleapis.com/auth/youtubepartner"})
         .then(function () {
             gapi.client.load("https://content.googleapis.com/discovery/v1/apis/youtube/v3/rest").then(function () {
+                document.getElementsByClassName("border-icon2")[0].classList.remove("icon-heart-empty");
+                document.getElementsByClassName("border-icon2")[0].classList.add("icon-heart");
                 gapi.client.youtube.videos.rate({
                     "id": "0wF8BjiWrxw",
                     "rating": "like"
