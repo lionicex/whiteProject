@@ -16,7 +16,7 @@ function modificar() {
     fondo.style.background = "#000000";
     fondo.style.padding = "20px 20% 20px 20px";
     a.style.color = "#ffffff";
-    /*cerrar.style.display = "block";*/
+    cerrar.style.display = "block";
     botonGuardar.style.display = "block";
     botonModificar.style.display = "none";
     botonRestaurar.style.display = "block";

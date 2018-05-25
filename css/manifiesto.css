@@ -6,10 +6,10 @@
     float: right;
     width: 40px;
     height: 40px;
-    border: 1px solid red;
+    border: 1px solid #000000;
     color: #000000;
     cursor: pointer;
-    z-index: 7;
+    z-index: 5;
 }
 
 #manifiesto .container {
@@ -136,7 +136,7 @@ hr {
 
     #manifiesto .menuList {
 
-        padding: 77px 0 0 0;
+        padding: 86px 0 0 0;
         background-color: #FFFFFF;
         width: auto;
         /* Es necesario aportar anchura al menú para limitar el ancho de los botones */
@@ -157,19 +157,7 @@ hr {
         padding: 20px 20% 20px 0;
         z-index: 11;
     }
-    #button-close {
-        display: none;
-        position: relative;
-        top: -40px;
-        float: right;
-        right: 0;
-        width: 40px;
-        height: 40px;
-        border: 1px solid #000000;
-        color: #000000;
-        cursor: pointer;
-        z-index: 7;
-    }
+
     #manifiesto .container {
         display: -webkit-flex;
         display: flex;
