@@ -9,7 +9,7 @@ let botonSocial3 = document.getElementById("social3");
 let autor = document.getElementById("nombre");
 let cerrar = document.getElementById("button-close");
 let fondo = document.getElementById("manifiesto-bg");
-
+let cont = 0;
 
 function modificar() {
     a.contentEditable = "true";
@@ -35,12 +35,16 @@ function guardar() {
     botonRestaurar.style.display = "none";
     botonCompartir.style.display = "block";
     botonSocial3.style.display = "none";
+    cont = 1;
 
 }
 
 function cancelar() {
-    restaurar();
-    guardar();
+    if (cont == 0) {
+        restaurar();
+        guardar();
+    }
+
 
 }
 
