@@ -1,14 +1,12 @@
-#manifiesto .form-container {
-    display: -webkit-flex;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0;
-    margin-top: 50px;
-    flex-wrap: wrap;
+#contacto{
+    padding: 0 10% 0 10% !important;
+    margin-top: 100px;
 }
 
-form h1 {
-    padding-bottom: 50px;
+
+#contacto h1 {
+    font-size: 50px;
+    margin-bottom: 50px;
 }
 
 #ff label {
@@ -26,14 +24,14 @@ input, textarea {
     background-color: #ffffff;
     color: #000;
     border: 1px solid #000000;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 25px;
     resize: none;
 }
 
-#manifiesto .form-contacto {
+#contacto .form-contacto {
     color: #000000;
-    width: 60%;
+
 }
 
 .sendButton {
@@ -48,5 +46,11 @@ input, textarea {
     color: #000;
     font-size: 20px;
     font-weight: bold;
+}
 
+@media (min-width: 700px) {
+    #contacto {
+        padding: 0 10% 0 10% !important;
+        margin-top: 150px;
+    }
 }

@@ -12,7 +12,7 @@
     <link rel="img" href="img">
 </head>
 
-<body>
+<body id="contacto">
 
 <header>
     <div class="container">
@@ -35,8 +35,8 @@
 </header>
 
 <main>
-    <section id="manifiesto">
-        <div class="form-container">
+    <section>
+        <div>
             <article class="form-contacto">
 
                 <form name="primerformulario" id="ff" method="post" action="envio.php">
@@ -54,8 +54,8 @@
                                pattern="[a-zA-Z0-9]+(?:(\.|_)[A-Za-z0-9!#$%&'*+/=?^`{|}~-]+)*@(?!([a-zA-Z0-9]*\.[a-zA-Z0-9]*\.[a-zA-Z0-9]*\.))(?:[A-Za-z0-9](?:[a-zA-Z0-9-]*[A-Za-z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?">
                     </label>
                     <label>
-                        <span>Mensaje</span>
-                        <textarea id="mensaje" name="mensaje" placeholder="Escribe aquí tu mensaje"
+                        <span>Mensaje*</span>
+                        <textarea id="mensaje" name="mensaje" required placeholder="Escribe aquí tu mensaje"
                                   style="height:200px"></textarea>
 
                     </label>
