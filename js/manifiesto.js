@@ -1,6 +1,5 @@
-
-let a = document.getElementById("texto");
-let rest = a.innerHTML;
+let p = document.getElementById("texto");
+let rest = p.innerHTML;
 let botonModificar = document.getElementById("modificar");
 let botonGuardar = document.getElementById("guardar");
 let botonRestaurar = document.getElementById("restaurar");
@@ -9,47 +8,52 @@ let botonSocial3 = document.getElementById("social3");
 let autor = document.getElementById("nombre");
 let cerrar = document.getElementById("button-close");
 let fondo = document.getElementById("manifiesto-bg");
-let cont = 0;
+let cancelado;
+let nombreEditable = "Escribe nombre + ";
 
 function modificar() {
-    a.contentEditable = "true";
+    p.contentEditable = "true";
     fondo.style.background = "#000000";
     fondo.style.padding = "20px 20% 20px 20px";
-    a.style.color = "#ffffff";
+    p.style.color = "#ffffff";
     cerrar.style.display = "block";
     botonGuardar.style.display = "block";
     botonModificar.style.display = "none";
     botonRestaurar.style.display = "block";
     autor.style.display = "inline-block";
+    cancelado = document.getElementById("texto").innerHTML;
 
 }
 
 function guardar() {
-    a.contentEditable = "false";
+    p.contentEditable = "false";
     fondo.style.background = "#ffffff";
     fondo.style.padding = "20px 20% 20px 0";
-    a.style.color = "#000000";
+    p.style.color = "#000000";
     cerrar.style.display = "none";
     botonGuardar.style.display = "none";
     botonModificar.style.display = "block";
     botonRestaurar.style.display = "none";
     botonCompartir.style.display = "block";
     botonSocial3.style.display = "none";
-    cont = 1;
+    autor = document.getElementById("nombre");
+    console.log(autor.textContent);
+    console.log(nombreEditable);
 
+    if (autor.textContent == nombreEditable) {
+        autor.style.display = "none";
+    } else {
+        autor.style.display = "inline-block";
+    }
 }
 
 function cancelar() {
-    if (cont == 0) {
-        restaurar();
-        guardar();
-    }
-
-
+    p.innerHTML = cancelado;
+    guardar();
 }
 
 function restaurar() {
-    a.innerHTML = rest;
+    p.innerHTML = rest;
 }
 
 function compartir() {
@@ -59,7 +63,7 @@ function compartir() {
 
 function saveTextAsFile() {
     let doc = new jsPDF();
-    let splitText = doc.splitTextToSize(a.textContent, 267);
+    let splitText = doc.splitTextToSize(p.textContent, 267);
     let title = 'Manifiesto';
 
     doc.setProperties({
@@ -86,11 +90,11 @@ function saveTextAsFile() {
 
 function setEmailHref() {
     let email = document.getElementById('email-button');
-    email.href = 'mailto:?body=' + encodeURI(a.textContent);
+    email.href = 'mailto:?body=' + encodeURI(p.textContent);
 }
 
 function setTwitterHref() {
     let twitter = document.getElementById('twitter-button');
     twitter.href = 'http://twitter.com/share?url=http://wwww.whiteproject.com&hashtags=Manifiesto&text=' +
-        encodeURI(a.textContent);
+        encodeURI(p.textContent);
 }
