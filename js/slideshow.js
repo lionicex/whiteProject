@@ -1,6 +1,8 @@
-var slideIndex = 0;
+let slideIndex = 0;
 showSlides();
-var slides, dots;
+var slides;
+var dots;
+let i = 0;
 
 function plusSlides(position) {
     slideIndex += position;
@@ -39,7 +41,7 @@ function currentSlide(index) {
 }
 
 function showSlides() {
-    var i;
+    let i;
     slides = document.getElementsByClassName("mySlides");
     dots = document.getElementsByClassName("dot");
     for (i = 0; i < slides.length; i++) {

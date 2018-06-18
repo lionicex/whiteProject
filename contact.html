@@ -12,12 +12,12 @@
     <link rel="img" href="img">
 </head>
 
-<body id="contacto">
+<body id="contact">
 
 <header>
     <div class="container">
-        <label class="icon-menu border-icon margin-button" for="menu-bar"></label>
-        <img src="img/Logo_whiteproyect.png" class="logo border-icon">
+        <label class="icon-menu border-icon-header margin-button" for="menu-bar"></label>
+        <img src="img/Logo_whiteproyect.png" class="logo border-icon-header">
         <div>
             <input type="checkbox" id="menu-bar">
             <nav class="menu">
@@ -25,10 +25,10 @@
                 <a href="#">Contacto</a>
             </nav>
         </div>
-        <div class="social">
-            <a class="icon-facebook border-icon margin-button" href="https://www.facebook.com/wearetheam/"></a>
-            <a class="icon-twitter border-icon margin-button" href="https://twitter.com/wearetheam"></a>
-            <a class="icon-instagram border-icon margin-button"
+        <div class="social-header">
+            <a class="icon-facebook border-icon-header margin-button" href="https://www.facebook.com/wearetheam/"></a>
+            <a class="icon-twitter border-icon-header margin-button" href="https://twitter.com/wearetheam"></a>
+            <a class="icon-instagram border-icon-header margin-button"
                href="https://www.instagram.com/explore/tags/theagilemonkeys/"></a>
         </div>
     </div>
@@ -37,15 +37,14 @@
 <main>
     <section>
         <div>
-            <article class="form-contacto">
+            <article class="form-contact container">
 
-                <form name="primerformulario" id="ff" method="post" action="envio.php">
+                <form name="form" id="form" method="post" action="php/send.php">
                     <h1>Contacto</h1>
                     <label>
                         <span>Nombre*</span>
                         <input type="text" placeholder="Por favor escribe tu nombre" autocomplete='name' name="name"
-                               id="name"
-                               required autofocus>
+                               id="name" required autofocus>
                     </label>
                     <label>
                         <span>Email*</span>
@@ -61,7 +60,7 @@
                     </label>
                     <label>
                         <input class="sendButton" type="submit" name="Submit" value="Enviar" method="post"
-                               action="envio.php">
+                               action="php/send.php">
                     </label>
                 </form>
 
@@ -73,13 +72,11 @@
 <footer>
     <a id="myBtn"><b>Forma parte de White project.</b></a>
     <p>&copy; 2018 Nombre de la empresa. Todos los derechos reservados.</p>
-    <!-- Modal -->
     <div id="myModal" class="modal">
-        <!-- Modal content -->
         <div class="modal-content">
             <div class="modal-header">
-                <span class="close">&times;</span>
-                <h1>Suscríbete</h1>
+                <span class="close">X</span>
+                <h2>Suscríbete</h2>
             </div>
             <div class="modal-body">
                 <form>

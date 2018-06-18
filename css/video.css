@@ -7,7 +7,7 @@
     margin-bottom: 50px;
 }
 
-#blog article:hover .social2 a {
+#blog article:hover .social-video a {
     display: block;
 }
 
@@ -30,7 +30,7 @@
 
 }
 
-#blog .text1 {
+#blog .text-blog {
     width: 100%;
     height: auto;
     padding: 5% 5% 5% 5%;
@@ -38,17 +38,17 @@
     max-width: 400px;
 }
 
-#blog .text1 h1 {
+#blog .text-blog h1 {
     font-size: 40px;
 
 }
 
-#blog .text1 p {
+#blog .text-blog p {
     font-size: 16px;
     line-height: 30px;
 }
 
-.deco {
+.text-blog-decoration {
     border-bottom: #000000 2px solid;
     position: absolute;
 
@@ -74,20 +74,20 @@
 
     }
 
-    #blog .text1 {
+    #blog .text-blog {
         width: 100%;
         height: 500px;
-        padding: 10% 0% 5% 10%;
+        padding: 10% 0 5% 10%;
         text-align: left;
         max-width: 500px;
     }
 
-    #blog .text1 h1 {
+    #blog .text-blog h1 {
         font-size: 50px;
 
     }
 
-    #blog .text1 p {
+    #blog .text-blog p {
         font-size: 20px;
         line-height: 30px;
 
