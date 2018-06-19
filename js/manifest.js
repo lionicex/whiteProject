@@ -5,7 +5,7 @@ let saveButton = document.getElementById("save");
 let restoreButton = document.getElementById("restore");
 let shareButton = document.getElementById("share");
 let socialManifestButton = document.getElementById("social-manifest");
-let autor = document.getElementById("name");
+let autor = document.getElementById("autorName");
 let closeButton = document.getElementById("button-close");
 let manifestBackground = document.getElementById("manifest-background");
 let cancelled;
@@ -36,7 +36,7 @@ function save() {
     restoreButton.style.display = "none";
     shareButton.style.display = "block";
     socialManifestButton.style.display = "none";
-    autor = document.getElementById("name");
+    autor = document.getElementById("autorName");
 
     if (autor.textContent === editableName) {
         autor.style.display = "none";
@@ -59,7 +59,7 @@ function share() {
     socialManifestButton.style.display = "block";
 }
 
-function download() {
+function downloadInPdf() {
     let doc = new jsPDF();
     let splitText = doc.splitTextToSize(p.textContent, 267);
     let title = 'Manifiesto';
