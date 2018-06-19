@@ -54,11 +54,5 @@ input, textarea {
         margin-top: 150px;
         margin-bottom: 100px;
     }
-
-    #contact . container {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-
-    }
+    
 }
