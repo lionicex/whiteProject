@@ -1,4 +1,4 @@
-#contact{
+#contact {
     padding: 0 10% 0 10% !important;
     margin-top: 100px;
 }
@@ -6,6 +6,11 @@
 #contact h1 {
     font-size: 50px;
     margin-bottom: 50px;
+}
+
+#contact .form-contact {
+    color: #000000;
+
 }
 
 #form label {
@@ -28,11 +33,6 @@ input, textarea {
     resize: none;
 }
 
-#contact .form-contact {
-    color: #000000;
-
-}
-
 .sendButton {
     position: relative;
     height: auto;
@@ -50,7 +50,15 @@ input, textarea {
 @media (min-width: 700px) {
 
     #contact {
-        padding: 0 10% 0 10% !important;
+        padding: 0 !important;
         margin-top: 150px;
+        margin-bottom: 100px;
+    }
+
+    #contact . container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
     }
 }
